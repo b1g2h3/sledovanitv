@@ -1,0 +1,66 @@
+{block content}
+<main role="main" class="container">
+
+    <div class="">
+        <div class="mt-4 d-flex justify-content-center">
+            <div>
+                <h1>Sledovani TV</h1>
+                <div>
+                    <button onclick="showTask(1)" type="button" class="btn btn-primary">Task 1</button>
+                    <button onclick="showTask(2)" type="button" class="btn btn-primary">Task 2</button>
+                    <button onclick="showTask(3)" type="button" class="btn btn-primary">Task 3</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="all visible-task1 visible-task2 visible-task3 ">Sql dotaz</h2>
+        <p class="all visible-task1">{nl2br($task1['sql'])|noescape}</p>
+        <p class="all visible-task2">{nl2br($task2['sql'])|noescape}</p>
+        <p class="all visible-task3">{nl2br($task3['sql'])|noescape}</p>
+        <h2 class="all visible-task1 visible-task2 visible-task3 ">Výsledek</h2>
+        <table class="table">
+            <thead>
+            <tr class="all visible-task1 visible-task2 visible-task3 ">
+                <th scope="col">ID</th>
+                <th scope="col">Username</th>
+                <th scope="col">fullName</th>
+                <th class="all visible-task3" scope="col">date Range</th>
+            </tr>
+            </thead>
+            <tbody>
+            {foreach $task1['data'] as $result}
+                <tr class="all visible-task1">
+                    <th>{$result->id}</th>
+                    <th>{$result->login}</th>
+                    <th>{$result->fullName}</th>
+                </tr>
+            {/foreach}
+            {foreach $task2['data'] as $result}
+                <tr class="all visible-task2">
+                    <th>{$result->id}</th>
+                    <th>{$result->login}</th>
+                    <th>{$result->fullName}</th>
+                </tr>
+            {/foreach}
+            {foreach $task3['data'] as $result}
+                <tr class="all visible-task3">
+                    <th>{$result->id}</th>
+                    <th>{$result->login}</th>
+                    <th>{$result->fullName}</th>
+                    <th>{$result->daterange}</th>
+                </tr>
+            {/foreach}
+            </tbody>
+        </table>
+    </div>
+
+</main>
+{block scripts}
+    <script lang="js">
+        $('.all').hide();
+
+        function showTask(taskID) {
+            $(".all").hide();
+            $(".visible-task" + taskID).show();
+        }
+    </script>
+{/block}
