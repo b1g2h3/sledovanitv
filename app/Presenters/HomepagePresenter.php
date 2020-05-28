@@ -27,11 +27,8 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 	public function renderDefault(): void
 	{
 		$this->template->task1 = $this->taskManager->getTask1();
-		$this->template->task2 =  $this->taskManager->getTask2();
-		$this->template->task3 =  $this->taskManager->getTask3();
+		$this->template->task2 = $this->taskManager->getTask2();
+		$this->template->task3 = $this->taskManager->getTask3();
 	}
-
-
-
 }
 
