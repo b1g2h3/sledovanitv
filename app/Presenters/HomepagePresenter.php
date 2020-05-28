@@ -95,8 +95,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 				JOIN services s
 					ON u.id = s.user
 				AND s.channelPackage IN (3,80,82)
-				GROUP BY u.id
-				ORDER BY u.id";
+				GROUP BY u.id";
 	}
 }
 
