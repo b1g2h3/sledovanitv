@@ -24,7 +24,7 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 	}
 
 	/**
-	 *
+	 * Rende data Default template
 	 */
 	public function renderDefault(): void
 	{
@@ -57,6 +57,9 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 					  OR s.to IS NULL	AND s.channelPackage IN (1,3,4,80)";
 	}
 
+	/**
+	 * @return string
+	 */
 	protected function usersWithInactiveChannelsButActHBOGO()
 	{
 		return "SELECT DISTINCT
@@ -71,6 +74,9 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 				OR s.to IS NULL AND s.channelPackage = 82";
 	}
 
+	/**
+	 * @return string
+	 */
 	protected function  dateRangeOnChHBOGO()
 	{
 		return "SELECT
