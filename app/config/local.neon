@@ -3,5 +3,5 @@ parameters:
 
 database:
 	dsn: 'mysql:host=127.0.0.1;dbname=sledovanitv'
-	user: 'admin'
-	password: '123456'
+	user: ''
+	password: ''
