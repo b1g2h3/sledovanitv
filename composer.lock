@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc238279e68b28c0750da25728291442",
+    "content-hash": "902b06d2cc3e6ddde9212e28ae06a153",
     "packages": [
         {
             "name": "latte/latte",

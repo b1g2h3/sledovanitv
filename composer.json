@@ -22,7 +22,7 @@
 		"tracy/tracy": "^2.6"
 	},
 	"require-dev": {
-		"nette/tester": "^2.0"
+		"nette/tester": "^2.3"
 	},
 	"autoload": {
 		"classmap": ["app/Bootstrap.php"]
